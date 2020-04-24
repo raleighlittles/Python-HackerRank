@@ -1,8 +1,8 @@
 import numpy
-N, M = tuple(map(int, input().split()))
-running_list = []
-for i in range(N):
-    running_list.append([x for x in input().split()])
+numpy.set_printoptions(sign=' ')
+n, m = map(int, input().split())
+a = numpy.array([input().split() for _ in range(n)], float)
+print(numpy.mean(a, axis = 1)) 
+print (numpy.var(a, axis = 0))
+print(numpy.around(numpy.std(a), 12))
 
-my_array = numpy.array(running_list, float)
-print( numpy.mean(my_array, axis = 1), numpy.var(my_array, axis= 0), numpy.std(my_array, axis=None), sep='\n' )
