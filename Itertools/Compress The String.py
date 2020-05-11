@@ -1,4 +1,2 @@
-import itertools
-input_string = input()
-for key, value in itertools.groupby(input_string):
-    print("({}, {})".format(len(list(value)), key), end=" ")
+from itertools import groupby
+print(*[(len(list(c)), int(k)) for k, c in groupby(input())])
